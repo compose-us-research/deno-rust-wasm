@@ -12,6 +12,6 @@ wasm-pack build && deno main.ts
 
 Returning a `JsValue` or a successful result `Ok(JsValue)` yields a pointer instead of the `JsValue`?
 
-See [returns_js_value_directly](./src/lib.rs#L5-8) and [returns_ok_js_value](./src/lib.rs#L10-13) for the Rust implementations and [the deno usage](./main.ts#L7-16).
+See [returns_js_value_directly](./src/lib.rs#L5-L8) and [returns_ok_js_value](./src/lib.rs#L10-L13) for the Rust implementations and [the deno usage](./main.ts#L7-L16).
 
-Strangely, using `Err(JsValue)` works as you can see in [returns_err_js_value](./src/lib.rs#L15-18) and its [usage in deno](./main.ts#L18-24)
+Strangely, using `Err(JsValue)` works as you can see in [returns_err_js_value](./src/lib.rs#L15-L18) and its [usage in deno](./main.ts#L18-L24)
