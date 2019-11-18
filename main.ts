@@ -13,7 +13,7 @@ import * as wasm from "./pkg/deno_rust_wasm_bg.wasm";
   try {
     console.log("try stuff!");
     // JsValue::from_str("")
-    console.log("why is this returning 36?", wasm.returns_js_value_directly());
+    console.log("why is this returning 36?", returns_js_value_directly());
 
     // Err(JsValue::from_str("this is actually working"))
     try {
