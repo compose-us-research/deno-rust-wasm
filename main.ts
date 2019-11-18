@@ -3,16 +3,17 @@ import init, {
   returns_ok_js_value,
   returns_err_js_value
 } from "./pkg/deno_rust_wasm.js";
+import * as wasm from "./pkg/deno_rust_wasm_bg.wasm";
 
 (async () => {
   console.log("before init");
-  await init();
+  await init(wasm);
   console.log("after init");
 
   try {
     console.log("try stuff!");
     // JsValue::from_str("")
-    console.log("why is this returning 36?", returns_js_value_directly());
+    console.log("why is this returning 36?", wasm.returns_js_value_directly());
 
     // Err(JsValue::from_str("this is actually working"))
     try {
