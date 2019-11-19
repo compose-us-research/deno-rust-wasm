@@ -22,4 +22,12 @@ Strangely, using `Err(JsValue)` works as you can see in [returns_err_js_value](.
 wasm-pack build --target web
 ```
 
-When initializing through the `.js` file, the browser stuff seems to work. Deno is still not really happy with it for now...
+When initializing through the `.js` file, the browser stuff seems to work. Deno is still not really happy with it for now.
+
+## Working
+
+```
+. start-deno.sh
+```
+
+This changes the default `wasm-pack build` result to provide an `init` function. The `init` function expects a `WebAssembly.Module` which you get by importing the `_bg.wasm` file from `wasm-pack build`.
